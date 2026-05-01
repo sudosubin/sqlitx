@@ -116,7 +116,7 @@ fn run() -> i32 {
     let input = render_lines(&rows);
     match fzf_pick(&input) {
         Ok(Some(name)) => launch(&name),
-        Ok(_) => 1,
+        Ok(_) => 0,
         Err(e) => {
             eprintln!("sqlitx: {e}");
             2
