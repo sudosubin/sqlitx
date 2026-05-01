@@ -6,7 +6,9 @@
 
 `fzf`-powered connection picker for [sqlit](https://github.com/Maxteabag/sqlit). Run `sqlitx` to open an interactive picker over all saved connections. Selecting one runs `sqlit -c "<name>"` in the current shell.
 
-<!-- demo gif -->
+<a href="docs/sqlitx.webp">
+  <img src="docs/sqlitx.webp" alt="sqlitx demo" width="800" />
+</a>
 
 ## Installation
 
