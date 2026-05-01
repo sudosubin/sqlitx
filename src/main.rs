@@ -33,9 +33,12 @@ fn render_lines(rows: &[Row]) -> String {
             let info = row.info.as_str().color(Color::BrightBlack);
             let user = row.user.as_str().color(Color::Black);
             if row.user.is_empty() {
-                format!("{label} {name} {dot} {info}", name = row.name)
+                format!("{label} {name} {dot} {info}\t{name}", name = row.name)
             } else {
-                format!("{label} {name} {dot} {info} {dot} {user}", name = row.name)
+                format!(
+                    "{label} {name} {dot} {info} {dot} {user}\t{name}",
+                    name = row.name
+                )
             }
         })
         .collect::<Vec<_>>()
