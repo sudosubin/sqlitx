@@ -9,8 +9,8 @@ pub fn icon_for(db_type: &str) -> &'static str {
         "postgresql" | "cockroachdb" | "redshift" | "supabase" => "",
         "sqlite" | "duckdb" | "turso" | "d1" | "motherduck" => "󰆼",
         "snowflake" => "󰜗",
-        "clickhouse" | "trino" | "presto" | "db2" | "firebird" | "hana" | "teradata"
-        | "flight" | "impala" | "osquery" | "surrealdb" => "󰆼",
+        "clickhouse" | "trino" | "presto" | "db2" | "firebird" | "hana" | "teradata" | "flight"
+        | "impala" | "osquery" | "surrealdb" => "󰆼",
         _ => "󰆼",
     }
 }

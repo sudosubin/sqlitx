@@ -51,7 +51,11 @@ fn connection_info(endpoint: &Endpoint) -> String {
 
 impl From<Connection> for Row {
     fn from(conn: Connection) -> Self {
-        let info = conn.endpoint.as_ref().map(connection_info).unwrap_or_default();
+        let info = conn
+            .endpoint
+            .as_ref()
+            .map(connection_info)
+            .unwrap_or_default();
         let user = conn
             .endpoint
             .as_ref()
