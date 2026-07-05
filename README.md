@@ -2,17 +2,23 @@
 
 # sqlitx
 
-[![license](https://badgen.net/github/license/sudosubin/sqlitx)](LICENSE)
-[![release](https://badgen.net/github/release/sudosubin/sqlitx)](https://github.com/sudosubin/sqlitx/releases)
-[![built with rust](https://badgen.net/badge/built%20with/Rust/orange)](https://www.rust-lang.org)
+[![version](https://badgen.net/github/release/sudosubin/sqlitx?label=version)](https://github.com/sudosubin/sqlitx/releases)
+[![license](https://badgen.net/github/license/sudosubin/sqlitx?color=green)](LICENSE)
 
 `fzf`-powered connection picker for [sqlit](https://github.com/Maxteabag/sqlit).
 
-<a href="docs/sqlitx.webp">
-  <img src="docs/sqlitx.webp" alt="sqlitx demo" width="800" />
+<a href="docs/assets/sqlitx-demo.webp">
+  <img src="docs/assets/sqlitx-demo.webp" alt="sqlitx demo" width="800" />
 </a>
 
 </div>
+
+## Quick Start
+
+```sh
+cargo install sqlitx
+sqlitx
+```
 
 ## Installation
 
@@ -26,7 +32,7 @@ cargo install sqlitx
 
 Run `sqlitx` to open an interactive picker over all saved connections. Selecting one runs `sqlit -c "<name>"` in the current shell.
 
-## Design
+## How It Works
 
 Connection config is resolved in order:
 
@@ -36,6 +42,15 @@ Connection config is resolved in order:
 
 sqlitx reads sqlit's connection store directly without spawning sqlit just to list connections. The actual database connection is delegated entirely to the `sqlit` binary. Built in Rust, startup is under 10ms.
 
+## Development
+
+```sh
+cargo fmt --all -- --check
+cargo clippy --all-targets --all-features -- -D warnings
+cargo test --all-features
+cargo build --all-features
+```
+
 ## License
 
-[MIT](LICENSE)
+MIT, see [LICENSE](./LICENSE).
