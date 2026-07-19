@@ -28,6 +28,12 @@ Requires `fzf` and `sqlit` on `PATH`.
 cargo install sqlitx
 ```
 
+Or install with Homebrew:
+
+```sh
+brew install sudosubin/tap/sqlitx
+```
+
 ## Usage
 
 Run `sqlitx` to open an interactive picker over all saved connections. Selecting one runs `sqlit -c "<name>"` in the current shell.
